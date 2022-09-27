@@ -1,0 +1,50 @@
+body {
+  font-family: arial, sans-serif;
+}
+li {
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+form {
+  margin-top: 50px;
+}
+.col-6 {
+  font-size: 25px;
+}
+.weatherapp {
+  border: 1px solid #ffffff;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.temperature {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1;
+  font-weight: 550;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.units {
+  position: relative;
+  top: -44px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+a:link,
+a:active {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.float-right {
+  position: absolute;
+  right: -500px auto;
+  height: 120px;
+}
