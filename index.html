@@ -17,6 +17,7 @@
  <link href="src/styles.css"rel="stylesheet" type="text/css"/>
     
   </head>
+
   <body background="images/background.jpg">
     <div class="container">
       <div class="weatherapp">
@@ -49,16 +50,34 @@
           </div>
         </div>
         
-        <h1 id="city"></h1>
+        <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="d-flex weather-temperature">
+                <img src="" alt="Clear" id="icon" />
+                <strong id="temperature"></strong>
+                <span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="fahrenheit-link"> °F </a>
+                </span>
+              </div>
+            </div>
 
         <div class="row">
-          <div class="col-6" id="date"></div>
+          <div class="col" id="date"></div>
           <div class="col offset">
             <ul>
               <li><span id="humidity"></span>%</li>
               <li>Humidity</li>
             </ul>
           </div>
+          
           <div class="col">
             <ul>
               <li><span id="wind"></span> km/h</li>
@@ -66,22 +85,7 @@
             </ul>
           </div>
         </div>
-
-        <div class="row">
-            <div class="col-6">
-              <div class="clearfix">
-                
-                <div class="float-left">
-                  <span class="temperature" id="temperature"></span>
-                  <span class="units">°C</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-            <ul>
-              <li>90%</li>
-              <li>precipitation</li>
-            </ul>
+                 
 
         <div class="row">
           <div class="col">
@@ -92,41 +96,7 @@
             />
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <ul>
-              <li>Thur</li>
-              <li>
-                20
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul>
-              <li>Fri</li>
-              <li>20°</li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul>
-              <li>Sat</li>
-              <li>21°</li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul>
-              <li>Sun</li>
-              <li>20°</li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul>
-              <li>Mon</li>
-              <li>20°</li>
-            </ul>
-          </div>
-        </div>
+            <div class="weather-forecast" id="forecast"></div>
       </div>
     </div>
     <script src="src/index.js"></script>
