@@ -1,4 +1,6 @@
-function formatDay(date) {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -9,26 +11,16 @@ function formatDay(date) {
   }
 
   let dayIndex = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
   let day = days[dayIndex];
-
   return `${day} ${hours}:${minutes}`;
 }
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+// function formatDay(timestamp) {
+//   let date = new Date(timestamp * 1000);
+//   let day = date.getDay();
+//   let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
 
-  return days[day];
-}
+//   return days[day];
+// }
 
 function displayForecast(response) {
   let forecast = response.data.daily;
