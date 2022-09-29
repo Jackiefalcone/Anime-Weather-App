@@ -94,3 +94,9 @@ li::first-letter {
 .align {
   margin-left: 100px;
 }
+.bottom {
+  color: darkmagenta;
+  text-decoration: underline;
+  background-color: white;
+  font-size: 14px;
+}
