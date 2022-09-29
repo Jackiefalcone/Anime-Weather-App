@@ -29,9 +29,10 @@ li::first-letter {
 }
 
 .weather-app {
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
+  padding: 1px;
+  border: 10px solid #dadde1;
+  border-radius: 10px;
+  margin: 1px;
 }
 
 .weather-app-wrapper {
@@ -83,6 +84,10 @@ li::first-letter {
   opacity: 0.5;
 }
 
-weather-forecast-temperatures {
+.weather-forecast-temperatures {
   font-size: 13px;
+}
+.kitty {
+  display: block;
+  margin-left: auto;
 }

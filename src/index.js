@@ -1,4 +1,4 @@
-function formatDate(date) {
+function formatDay(date) {
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -53,12 +53,12 @@ function displayForecast(response) {
                 width="42"
               />
               <div class="weather-forecast-temperatures">
-                <span lass="weather-forecast-temperatures-max">${Math.round(
+                <span class="weather-forecast-temperatures-max">${Math.round(
                   forecastDay.temp.max
-                )}</span>
+                )}</span>°
                 <span class="weather-forecast-temperatures-min">${Math.round(
                   forecastDay.temp.min
-                )}</span>
+                )}</span>°
               </div>
               </div>
             `;
@@ -92,7 +92,7 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  dateElement.innerHTML = formatDay(response.data.dt * 1000);
 
   iconElement.setAttribute(
     "src",
