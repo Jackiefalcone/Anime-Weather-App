@@ -113,6 +113,12 @@ function displayCelsiusTemperature(event) {
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 }
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(search);
+}
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let celsiusTemperature = null;
 let form = document.querySelector("#search-form");
